@@ -1,14 +1,16 @@
 import React from 'react';
-import {Slider, InputNumber, Row, Col} from 'antd';
+import { Slider, InputNumber, Row, Col } from 'antd';
 
 export class CountSlider extends React.Component {
     state = {
-        inputValue: 1,
+        inputValue: 2,
     }
+
     onChange = (value) => {
         this.setState({
-            inputValue: value,
+            inputValue: isNaN(Number(value)) ? 2 : value,
         });
+        this.props.onCountSliderChange(value);
     }
 
     render() {
