@@ -14,7 +14,7 @@ export class Main extends React.Component {
     }
 
     componentDidMount() {
-        this.loadPlayerInfo('James Harden')
+        this.loadPlayerInfo('Chris Paul')
     }
 
     loadPlayerInfo = (playerName) => {
@@ -26,7 +26,6 @@ export class Main extends React.Component {
                 playerInfo: playerInfo
             });
         });
-
     }
 
     render() {
